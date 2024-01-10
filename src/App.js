@@ -1,10 +1,12 @@
-import logo from './c1.png';
+import logo from './logo.svg';
 import './App.css';
 import './bootstrap.css';
 import './responsive.css';
 import './style.css.map';
 import './style.css';
-import gif from  './icegif-502.gif'
+import gif from  './icegif-502.gif';
+import gif2 from './josue-pimenta-retro-computer.gif';
+
 
 
 
@@ -27,10 +29,13 @@ function App() {
 
     {/* #303b30 */}
 
+
+
+
     <div className='cards'>
     <h1 id="Home">Hi, I am Clifton !</h1>
     <h2>Let's Develop a Website</h2>
-    <img className='giffy' src={gif} alt="Gif"/>
+    <img className='giffy' src={gif2} alt="Gif"/>
 
     <p>I am starting my journey as an aspring web developer mastring the ins and outs of React. Welcome to my digital playground, where creativity meets functionality! As a web developer, I wield a dynamic blend of coding prowess and design finesse to craft seamless and visually captivating online experiences. </p>
     </div>
@@ -58,7 +63,12 @@ function App() {
     <h1 id='Contact me'>Let's work together</h1>
     <a href='https://trollface.dk/' target="_blank">Hire me</a>
     </div> 
+
+    <p id='copyright'>&copy; Clifton 2024.</p>
+
     </div> 
+
+
     
   );
 }
