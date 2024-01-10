@@ -11,7 +11,7 @@ import gif from  './icegif-502.gif'
 function App() {
   return (
     <div className='App'>
-     <div className='navi-bar'>
+     {/* <div className='navi-bar'>
       
       <p>
         <ul className='nav-list'>
@@ -23,7 +23,7 @@ function App() {
           <a href='#Contact me'><li className='nav-components'>Contact Me</li></a>
         </ul>
       </p>
-    </div>
+    </div> */}
 
     {/* #303b30 */}
 
