@@ -13,14 +13,200 @@ import { DateCalendar } from '@mui/x-date-pickers/DateCalendar';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 
+import Box from '@mui/material/Box';
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import { tableCellClasses } from '@mui/material/TableCell';
+import { styled } from '@mui/system';
+import { withStyles } from "@mui/system";
+// to include the tables
+
+
+// Now imports to include the styles that i need
+//Here the tags
+import { makeStyles } from "@mui/material/styles";
+import yellow from "@mui/material/colors/yellow";
+
+
+
+
+function createData(நல்ல_நேரம், கே, இராகு, குளிகை, எமகண்டம் ) {
+  return { நல்ல_நேரம், கே, இராகு, குளிகை, எமகண்டம் };
+}
+
+const rows = [
+  createData('காலை', 9.45, 6.0, 2.4, 4.00),
+  createData('மாலை', 9.45, 6.0, 2.4, 4.00),
+];
+
+// const StyledTableCell = styled(TableCell)(({ theme }) => ({
+//   [`&.${tableCellClasses.head}`]: {
+//     backgroundColor: theme.palette.common.black,
+//     color: theme.palette.common.white,
+//   },
+//   [`&.${tableCellClasses.body}`]: {
+//     fontSize: 14,
+//   },
+// }));
 
 function App() {
+  
   return (
+    
   <Container>
 
   <Grid container spacing={2}>
 
-  <Grid item xs={12} sm={6}>
+  <Grid item xs={12} sm={12}>
+    
+  {/* This is the working Area Grid */}
+  <Grid container style={{ background: '#f2f6fc' }} xs={12} sm={12} md={12}>
+    {/* <Card sx={{ minWidth: 275 }}>
+      <CardContent> */}
+        
+      {/* The first major nested grid */}
+      <Grid container spacing={2}>
+      
+      <Grid item xs={3} sm={3} md={3} >
+      
+      <Box component="img"
+       sx={{
+       height: 233,
+       width: 350,
+       maxHeight: { xs: 233, md: 197 },
+       maxWidth: { xs: 350, md: 280 },
+           }}
+       alt="The house from the offer."
+       src="https://nepalyogahome.com/wp-content/uploads/2021/07/Lord-Vishnu-990x675.jpg"
+      /> 
+      
+      </Grid>
+
+      <Grid item xs={6} sm={6} md={6}>
+      <Paper square><Typography textAlign={'center'} sx={{ fontSize: 50 }} color="text.primary" gutterBottom>20-01-2024</Typography></Paper>      
+      </Grid>
+
+      <Grid item xs={3} sm={3} md={3}>
+      <Box component="img"
+       sx={{
+       height: 233,
+       width: 350,
+       maxHeight: { xs: 233, md: 197 },
+       maxWidth: { xs: 350, md: 280 },
+           }}
+       alt="The house from the offer."
+       src="https://nepalyogahome.com/wp-content/uploads/2021/07/Lord-Vishnu-990x675.jpg"
+      />
+      </Grid>
+      
+
+
+      </Grid>
+
+    {/* The second major nested grid */}
+      <Grid item xs={12} sm={12} md={12}>
+     
+      
+      <Typography textAlign={'center'} sx={{ fontSize: 23, fontWeight: 'bold' }} color="text.primary" gutterBottom>அமைதி இல்லாத இடத்தில் இன்பம் இருக்க முடியாது.</Typography>
+      
+
+
+      </Grid>
+      
+       {/* The third major nested grid */}
+      <Grid container  xs={12} sm={12} md={12}>
+     
+
+     {/* the paragraphed stuff */}
+      <Grid container style={{ background: '#f2f6fc' }} spacing xs={8} sm={8} md={8}>
+
+      
+        {/* the second row */}
+        <Grid container spacing={1}>
+        <Grid item xs={4} sm={4}><Paper><Typography textAlign={'center'} sx={{ fontSize: 15, fontWeight: 'bold' }} color="text.primary" gutterBottom>சோபகிருது 7 தை </Typography></Paper></Grid>
+        <Grid item xs={4} sm={4}><Paper><Typography textAlign={'center'} sx={{ fontSize: 15, fontWeight: 'bold' }} color="text.primary" gutterBottom>January</Typography></Paper></Grid>
+        <Grid item xs={4} sm={4}><Paper><Typography textAlign={'center'} sx={{ fontSize: 15, fontWeight: 'bold' }} color="text.primary" gutterBottom>வளர்பிறை </Typography></Paper></Grid>
+        <Grid item><Paper>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </Paper></Grid>
+        {/* the second row */}
+        <Grid item><Paper>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        </Paper></Grid>
+        </Grid>
+
+      </Grid>
+
+
+
+      <Grid item xs={4} sm={4} md={4}>
+      <Paper>
+      <Typography textAlign={'center'} sx={{ fontSize: 15, fontWeight: 'bold' }} color="text.primary" gutterBottom>இராசிபலன்</Typography> 
+      
+      <ul>
+<li>மேஷம் - குழப்பம் </li>
+<li>ரிஷிபம் - அமைதி </li>
+<li>மிதுனம் - இரக்கம் </li>
+<li>கடகம் - உழைப்பு </li>
+<li>சிம்மம் - கோபம் </li>
+<li>கன்னி - பயம் </li>
+<li>துலாபம் - எதிர்ப்பு </li>
+<li>விருச்சி - வெற்றி </li>
+<li>தனுசு - லாபம் </li>
+<li>மகரம் - நன்மை </li>
+<li>கும்பம் - மகிழ்ச்சி </li>
+<li>மீனம் - பொறுமை</li>
+</ul>
+        </Paper>
+      </Grid>
+
+
+      </Grid>
+
+      {/* The Fourth major nested grid , where the tables reside*/}
+      <Grid container xs={12} sm={12} md={12}>
+    
+      <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>நல்ல_நேரம்</TableCell>
+            <TableCell align="right">கே</TableCell>
+            <TableCell align="right">இராகு</TableCell>
+            <TableCell align="right">குளிகை</TableCell>
+            <TableCell align="right">எமகண்டம்</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow
+              key={row.நல்ல_நேரம்}
+              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            >
+              <TableCell component="th" scope="row">
+                {row.நல்ல_நேரம்}
+              </TableCell>
+              <TableCell align="right">{row.கே}</TableCell>
+              <TableCell align="right">{row.இராகு}</TableCell>
+              <TableCell align="right">{row.குளிகை}</TableCell>
+              <TableCell align="right">{row.எமகண்டம்}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+
+
+      </Grid>
+
+
+      {/* </CardContent>
+    </Card> */}
+   </Grid>
 
       <Card sx={{ minWidth: 275 }}>
       <CardContent>
@@ -35,9 +221,9 @@ function App() {
       </Card>
     </Grid>
 
-    <Grid item xs={12} sm={6}>
+    <Grid item xs={12} sm={12}>
 
-      <Card sx={{ minWidth: 275 }}>
+      <Card sx={12}>
       <CardContent>
       <h1 id="Home">Hi, I am Clifton !</h1>
       <h2>Let's Develop a Website</h2>
@@ -56,24 +242,12 @@ function App() {
     </Grid>
 
 
-    <Grid item xs={12} sm={6} md={12}>
-    <Card sx={{ minWidth: 275 }}>
-      <CardContent>
-      
-      
-      
+    
 
 
-      
-
-      </CardContent>
-    </Card>
-   </Grid>
-
-
-    <Grid item xs={12} sm={6} md={12}>
+    <Grid item xs={12} sm={12} md={12}>
     <Card>
-      <CardContent sx={{ minWidth: 275 }}>      
+      <CardContent sx={12}>      
       <div className='cards'>
       <h1 id='Education'>EDUCATION</h1>
       <p>2020 Jan - 2024 Jan | Bsc in Audiology</p>
@@ -85,9 +259,9 @@ function App() {
     </Card>
     </Grid>
 
-    <Grid item xs={12} sm={6} md={12}>
+    <Grid item xs={12} sm={12} md={12}>
     <Card>
-      <CardContent sx={{ minWidth: 275 }}>
+      <CardContent sx={12}>
       <div className='cards'>
       <h1 id='Experience'>PREVIOUS EXPERIENCE</h1>
       <p>Developing Neural networks in identifying brain tumors | Python</p>
@@ -99,9 +273,9 @@ function App() {
     </Card>
     </Grid>
 
-    <Grid item xs={12} sm={6} md={12}>
+    <Grid item xs={12} sm={12} md={12}>
       <Card>
-      <CardContent sx={{ minWidth: 275}}>
+      <CardContent sx={12}>
       <div className='cards'>
       <h1></h1>
       <h1 id='Contact me'>Let's work together</h1>
