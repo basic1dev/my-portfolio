@@ -64,7 +64,7 @@ function App() {
   <Grid item xs={12} sm={12}>
     
   {/* This is the working Area Grid */}
-  <Grid container style={{ background: '#f2f6fc' }} xs={12} sm={12} md={12}>
+  <Grid container style={{ background: '#70FFFD' }} xs={12} sm={12} md={12}>
     {/* <Card sx={{ minWidth: 275 }}>
       <CardContent> */}
         
