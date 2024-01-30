@@ -1,12 +1,14 @@
 
 
 
-/* All css here would be suspended to create create MUI components, 
-Lest start from scratch. */
+/* 
+All css here would be suspended to create create MUI components, 
+Lest start from scratch. 
+*/
 
 .App {
   text-align: center;
-  background-color: #ffffff;
+  background-color: #a8a2a2;
   color: #fafafa;
 }
 
