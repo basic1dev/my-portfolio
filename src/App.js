@@ -1,14 +1,17 @@
 //import gif from  './icegif-502.gif';
 //import gif2 from './josue-pimenta-retro-computer.gif';
 import { Container } from '@mui/material';
-import { useState } from 'react';
 // import Grid from '@mui/material/Grid';
 // import Paper from '@mui/material/Paper';
 
 
+import { useState } from 'react';
+
 import Carousel from 'react-multi-carousel';
 import '../node_modules/react-multi-carousel/lib/styles.css';
+
 import { ProductCard } from './components/ProductCard';
+
 
 // import Card from '@mui/material/Card';
 // import CardActions from '@mui/material/CardActions';
@@ -31,13 +34,14 @@ import { ProductCard } from './components/ProductCard';
 // import { withStyles } from "@mui/system";
 // to include the tables
 
-// importing all the images
+//importing all the images
 import theSelfishGene from "./BImages/theSelfishGene.jpg"; 
 import atomicHabits from "./BImages/atomicHabits.jpg"; 
 import peak from "./BImages/peak.jpg"; 
 import the33StrategiesOfWar from "./BImages/the33StrategiesOfWar.jpg"; 
 import the48LawsOfPower from "./BImages/the48LawsOfPower.jpg"; 
 import theGodDelusion from "./BImages/theGodDelusion.jpeg"; 
+
 
 
 // Now imports to include the styles that i need
@@ -71,16 +75,14 @@ import theGodDelusion from "./BImages/theGodDelusion.jpeg";
 //   },
 // }));
 
-function App() {
+function App() { 
   // const [name, setName2] = useState(null);
-  const [books, setbooks] = useState([
-    {name:"The Selfish Gene", description : "Richard Dawkins", imageURL: theSelfishGene}, 
-    {name: "The God Delusion", description: "Richard Dawkins", imageURL: theGodDelusion}, 
-    {name:"The 48 Laws of power", description: "Robert Greene", imageURL: the48LawsOfPower},
-    {name:"The 33 strategies of War", description: "Robert Greene", imageURL: the33StrategiesOfWar}, 
-    {name: "Atomic Habits", description: "James Clear", imageURL: atomicHabits}, 
-    {name:"Peak", description: "Anders Ericcson", imageURL: peak}
-  ])
+
+  const [books, setbooks] = useState([{name:"The Selfish Gene", description : "Richard Dawkins", imageURL: theSelfishGene},    {name: "The God Delusion", description: "Richard Dawkins", imageURL: theGodDelusion},    
+  {name:"The 48 Laws of power", description: "Robert Greene", imageURL: the48LawsOfPower},   
+  {name:"The 33 strategies of War", description: "Robert Greene", imageURL: the33StrategiesOfWar},    
+  {name: "Atomic Habits", description: "James Clear", imageURL: atomicHabits},    
+  {name:"Peak", description: "Anders Ericcson", imageURL: peak} ]);
 
 
   // const [item, setitem] = useState([
@@ -98,25 +100,25 @@ function App() {
 
 
 // For the carousal
-const responsive = {
-  superLargeDesktop: {
-    // the naming can be any, depends on you.
-    breakpoint: { max: 4000, min: 3000 },
-    items: 5
-  },
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 3
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-}
+ const responsive = {
+   superLargeDesktop: {
+     // the naming can be any, depends on you.
+     breakpoint: { max: 4000, min: 3000 },
+     items: 5
+   },
+   desktop: {
+     breakpoint: { max: 3000, min: 1024 },
+     items: 3
+   },
+   tablet: {
+     breakpoint: { max: 1024, min: 464 },
+     items: 2
+   },
+   mobile: {
+     breakpoint: { max: 464, min: 0 },
+     items: 1
+   }
+ }
   
   return (
 
@@ -150,12 +152,24 @@ const responsive = {
           // <h3 key={index}> my name is {friend.name} </h3>
           <ProductCard name={book.name} description={book.description} imageURL={book.imageURL} />
         ))}
-      </Carousel>
+     </Carousel>
         
-
       </div>
 
+      <h1 style={{textAlign: 'center', padding:"10px"}}> Book Sale </h1>
 
+
+      <div style={{padding: "10px", backgroundColor: "#dfecec"}}className='App'>
+
+      <Carousel responsive={responsive}>
+      {/* <ProductCard name={"Shoes"} description={"High quality"} /> */}
+      {books.map((book, index) => (
+          // <h3 key={index}> my name is {friend.name} </h3>
+          <ProductCard name={book.name} description={book.description} imageURL={book.imageURL} />
+        ))}
+     </Carousel>
+        
+      </div>
 
     </Container>
     

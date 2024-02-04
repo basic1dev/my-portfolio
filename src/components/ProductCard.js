@@ -27,8 +27,6 @@ export const ProductCard = (props) => {
            <Typography variant="body2" color="text.secondary">
              {props.description}
            </Typography>
-
-
          </CardContent>
          
          
